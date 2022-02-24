@@ -1,0 +1,17 @@
+.container {
+    padding: 0 20px;
+    @include xl-devices {
+        max-width: 1260px;
+    }
+    @include xxl-devices {
+        max-width: 1560px;
+    }
+}
+
+@import 'hero';
+@import 'prize-axes';
+@import 'news';
+@import 'winner_work';
+@import 'media';
+@import 'contact';
+@import '3col_widget';

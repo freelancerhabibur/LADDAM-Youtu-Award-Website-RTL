@@ -1,0 +1,61 @@
+.contact {
+    background-color: rgba(#7e7f75, 0.05);
+    padding: 60px 0;
+
+    .contact-form {
+        margin-bottom: 30px;
+        .form-group {
+            margin-bottom: 20px;
+            input {
+                height: 60px;
+                box-shadow: none;
+                outline: none;
+                border-color: $color__white;
+            }
+            textarea {
+                box-shadow: none;
+                outline: none;
+                border-color: $color__white;
+            }
+            input:focus, textarea:focus {
+                border-color: $color__white;
+            }
+        }
+        button {
+            background-color: #7e7f75;
+            border: 0;
+            color: $color__white;
+            padding: 10px 35px;
+            border-radius: 5px;
+        }
+    }
+    .contact-information {
+        padding: 20px 0;
+        border-top: 3px solid $color__lightBlue;
+        border-bottom: 3px solid $color__lightBlue;
+        @include xl-devices {
+            margin-right: 80px;
+
+        }
+        strong {
+            font-weight: 700;
+            color: $color__silver;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .mail {
+            color: $color__pink;
+            font-weight: 700;
+        }
+    }
+    .contact-map {
+        padding: 8px;
+        background-color: $color__white;
+        box-shadow: 0 0 20px rgba($color__Black, 0.1);
+        display: none;
+        @include lg-devices {
+            display: block;
+        }
+    }
+}

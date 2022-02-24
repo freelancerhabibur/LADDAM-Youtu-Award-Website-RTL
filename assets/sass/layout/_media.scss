@@ -1,0 +1,153 @@
+.media {
+    padding: 40px 0;
+    @include md-devices {
+        padding: 60px 0;
+    }
+    .media-tab {
+        .nav-tabs {
+            border: 0;
+            gap: 20px;
+            .nav-item {
+                display: block;
+                margin-bottom: 20px;
+
+                @include xsm-devices {
+                    margin-bottom: 30px;
+                }
+                @include lg-devices {
+                    margin-bottom: 10px;
+                }
+            }
+            .nav-link {
+                background-color: #f1f5ff;
+                box-shadow: 0 0 15px rgba($color__Black, 0.1);
+                padding: 25px 20px;
+                border-radius: 5px;
+                text-align: center;
+                width: 120px;
+                font-weight: 700;
+                font-size: 13px;
+                border: 0;
+                color: $color__silver;
+                @include flex-center;
+                flex-direction: column;
+                position: relative;
+
+                @include xsm-devices {
+                    width: 150px;
+                    padding: 35px 20px;
+                    border-radius: 8px;
+                }
+                @include lg-devices {
+                    width: 135px;
+                    font-size: 15px;
+                }
+                @include xl-devices {
+                    width: 150px;
+                    font-size: 16px;
+                }
+                @include xxl-devices {
+                    width: 180px;
+                    font-size: 20px;
+                    padding: 40px 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 20px rgba($color__Black, 0.1);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: 12px;
+                    bottom: 12px;
+                    right: 12px;
+                    border: 1px solid $color__lightBlue;
+                    border-radius: 8px;
+                    opacity: 0;
+                    transition: all 0.2s;
+                }
+                svg {
+                    margin: 0 auto 5px; 
+                    @include width-height(30px, 30px);
+                    @include flex-center;
+                    
+                    @include xsm-devices {
+                        @include width-height(40px, 40px);
+                    }
+                    @include xxl-devices {
+                        @include width-height(60px, 60px);
+                    }
+                    @include xxxl-devices {
+                        @include width-height(70px, 70px);
+                    }
+                }
+                &.active {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .media-content {
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0;
+            border-top: 2px solid $color__lightBlue;
+            border-bottom: 2px solid $color__lightBlue;
+
+            .item {
+                width: 100%;
+                max-width: calc(50% - 8px);
+                position: relative;
+
+                @include md-devices {
+                    max-width: calc(33% - 8px);
+                }
+                @include xl-devices {
+                    max-width: calc(25% - 8px);
+                }
+
+                .icon {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $color__lightBlue;
+                    padding: 7px;
+                    opacity: 0;
+                    transition: all 0.2s linear;
+
+                    svg {
+                        width: 30px;
+                        fill: $color__white;
+                    }
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(#7e7f75, 0.9);
+                    color: $color__white;
+                    @include flex-center;
+                }
+
+                img {
+                    filter: grayscale(100%) sepia(5%) hue-rotate(170deg) saturate(1000%) contrast(125%);
+                }
+
+                &:hover {
+                    img {
+                        filter: inherit;
+                    }
+                    .icon {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

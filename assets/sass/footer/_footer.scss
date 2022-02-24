@@ -1,0 +1,159 @@
+footer {
+    .footer-top {
+        padding: 40px 0;
+        text-align: right;
+
+        .brand-logos {
+            @include xs-devices {
+                margin-bottom: 30px;
+                margin-top: 10px;
+            }
+            a {
+                position: relative;
+                display: inline-block;
+            }
+            .logo1 {
+                width: 110px;
+                @include xl-devices {
+                    width: 95px;
+                }
+                @include xxl-devices {
+                    width: 115px;
+                }
+            }
+            .logo2 {
+                width: 150px;
+                @include xl-devices {
+                    width: 150px;
+                }
+                @include xxl-devices {
+                    width: 180px;
+                }
+            }
+            @include xs-devices {
+                a + a {
+                    margin-left: 20px;
+                    padding-left: 20px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        height: 120px;
+                        width: 1px;
+                        background-color: $color__Black;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            @include lg-devices {
+                a + a {
+                    margin-left: 0;
+                    padding-left: 0;
+                    margin-top: 20px;
+                    padding-top: 20px;
+                    &::before {
+                        left: 50%;
+                        top: 0;
+                        height: 1px;
+                        width: 120px;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+            @include xl-devices {
+                a + a {
+                    margin-left: 10px;
+                    padding-left: 15px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        height: 120px;
+                        width: 1px;
+                        background-color: $color__Black;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            @include xxl-devices {
+                a + a {
+                    margin-left: 30px;
+                    padding-left: 30px;
+                }
+            }
+        }
+        .footer-widget {
+            .title {
+                font-weight: 700;
+                color: $color__silver;
+                font-size: 16px;
+                margin: 20px 0 30px;
+                padding: 5px 0 10px;
+                border-bottom: 1px solid rgba($color__silver, 0.2);
+                @include lg-devices {
+                    height: 60px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: end;
+                    font-size: 18px;
+                }
+            }
+        }
+        .social-links {
+            li {
+                display: inline-block;
+
+                a {
+                    @include width-height(40px, 40px);
+                    @include flex-center;
+                    border: 1px solid $color__lightBlue;
+                    margin-left: 10px;
+                    border-radius: 50%;
+                    color: $color__silver;
+                    transition: all 0.3s linear;
+                    &:hover {
+                        background-color: $color__lightBlue;
+                        color: $color__white;
+                    }
+                }
+            }
+        }
+        .links {
+            li {
+                line-height: 1.875;
+                padding: 2px 0;
+                font-size: 16px;
+                width: 50%;
+                float: right;
+                a {
+                    color: $color__silver;
+                }
+            }
+        }
+        .subscribe-form {
+            input {
+                height: 50px;
+                box-shadow: none;
+                outline: none;
+                border-color: $color__white;
+                text-align: right;
+            }
+            button {
+                border: 0;
+                background-color: #7e7f75;
+                color: $color__white;
+                padding: 0 30px;
+            }
+        }
+    }
+    .footer-bottom {
+        background-color: $color__lightBlue;
+        padding: 10px 0;
+        p {
+            color: $color__white;
+        }
+    }
+}

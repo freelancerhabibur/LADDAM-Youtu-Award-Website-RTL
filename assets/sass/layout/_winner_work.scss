@@ -1,0 +1,81 @@
+.winners {
+    background-color: rgba($color__lightBlue, 0.05);
+    padding: 60px 0 80px;
+
+    .winner-carousel {
+        margin-top: 20px;
+        .item {
+            position: relative;
+            overflow: hidden;
+            max-width: 300px;
+            margin: 0 auto;
+            @include xl-devices {
+                max-width: 100%;
+            }
+            img {
+                filter: grayscale(1);
+                transition: all 0.2s linear;
+            }
+
+            .desc {
+                position: absolute;
+                bottom: -72px;
+                left: 0;
+                right: 0;
+                background-color: #7e7f75;
+                text-align: center;
+                transition: all 0.3s linear;
+                padding: 16px 15px;
+                @include xsm-devices {
+                    bottom: -60px;
+                }
+                @include lg-devices {
+                    bottom: -62px;
+                }
+
+                p {
+                    color: $color__white;
+                    font-weight: 600;
+                    font-size: 17px;
+                    margin-bottom: 6px;
+                    transition: all 0.3s linear;
+                    @include xsm-devices {
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                    @include lg-devices {
+                        margin-bottom: 3px;
+                        font-size: 15;
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    color: $color__Black;
+                    font-weight: 700;
+                    text-decoration: underline;
+                    text-underline-offset: 2px;
+                    @include xsm-devices {
+                        font-size: 13px;
+                    }
+                }
+            }
+            &:hover {
+                img {
+                    filter: grayscale(0);
+                    transform: scale(1.05);
+                }
+                .desc {
+                    bottom: 0;
+
+                    p {
+                        margin-bottom: 3px;
+                        @include xsm-devices {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

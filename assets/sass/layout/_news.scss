@@ -1,0 +1,207 @@
+.news {
+    padding: 40px 0;
+    @include lg-devices {
+        padding: 80px 0;
+    }
+
+    .blog-item {
+        margin-bottom: 20px;
+        max-width: 380px;
+        @include xl-devices {
+            max-width: 420px;
+        }
+        .post-details {
+            padding: 20px 0 0;
+            .post-date {
+                color: $color__lightBlue;
+                // font-size: 18px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .post-title {
+                font-weight: 700;
+                color: $color__silver;
+                font-size: 14px;
+                line-height: 1.85;
+                @include lg-devices {
+                    font-size: 16px;
+                }
+                @include xxl-devices {
+                    font-size: 18px;
+                }
+                a {
+                    color: $color__silver;
+                }
+            }
+            .details-link {
+                padding-top: 20px;    
+                a {
+                    border: 1px solid $color__Black;
+                    padding: 8px 20px;
+                    border-radius: 30px;
+                    display: inline-block;
+                    color: $color__silver;
+                    font-weight: 600;
+                    font-size: 12px;
+                    transition: all 0.3s;
+                    @include lg-devices {
+                        font-size: 13px;
+                        padding: 10px 22px;
+                    }
+                    @include xl-devices {
+                        font-size: 14px;
+                        padding: 12px 25px;
+                    }
+    
+                    &:hover {
+                        background-color: $color__silver;
+                        color: $color__white;
+                        border-color: $color__silver;
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-list {
+        .article-list-item {
+            padding: 15px 0;
+            border-top: 1px solid $color__lightBlue;
+            max-width: 380px;
+            @include lg-devices {
+                border-top: 3px solid $color__lightBlue;                
+            }
+            @include xl-devices {
+                max-width: 420px;
+            }
+            .post-date {
+                color: $color__lightBlue;
+                font-size: 12px;
+                font-weight: 600;
+                @include lg-devices {
+                    font-size: 15px;
+                }
+                @include xxl-devices {
+                    font-size: 18px;
+                }
+            }
+            .post-title {
+                font-weight: 700;
+                color: $color__silver;
+                font-size: 14px;
+                line-height: 1.85;
+                @include lg-devices {
+                    font-size: 16px;
+                }
+                @include xxl-devices {
+                    font-size: 18px;
+                }
+                a {
+                    color: $color__silver;
+                }
+            }
+            &:last-child {
+                border-bottom: 1px solid $color__lightBlue;
+                @include lg-devices {
+                    border-bottom: 3px solid $color__lightBlue;
+                }
+            }
+
+        }
+        .all-post {
+            padding-top: 20px;
+            margin-bottom: 30px;
+
+            a {
+                border: 1px solid $color__Black;
+                padding: 8px 20px;
+                border-radius: 30px;
+                display: inline-block;
+                color: $color__silver;
+                font-weight: 600;
+                font-size: 12px;
+                transition: all 0.3s;
+                @include lg-devices {
+                    font-size: 13px;
+                    padding: 10px 22px;
+                }
+                @include xl-devices {
+                    font-size: 14px;
+                    padding: 12px 25px;
+                }
+                &:hover {
+                    background-color: $color__silver;
+                    color: $color__white;
+                    border-color: $color__silver;
+                }
+            }
+        }
+    }
+    .announcement {
+        height: 100%;
+        max-width: 380px;
+        background-color: rgba($color__lightBlue, 0.15);
+        @include xl-devices {
+            max-width: 100%;
+        }
+
+        .date {
+            padding: 14px 0;
+            color: $color__white;
+            font-weight: 700;
+            background-color: $color__lightBlue;
+            text-align: center;
+            font-size: 18px;
+            @include lg-devices {
+                font-size: 22px;
+                padding: 20px 30px;
+            }
+        }
+        .inner {
+            padding: 0 15px 30px;
+            @include lg-devices {
+                padding: 10px 30px 20px;
+            }
+            @include xl-devices {
+                padding: 30px 40px;
+            }
+        }
+        .title {
+            font-weight: 700;
+            color: $color__silver;
+            margin-bottom: 20px;
+            font-size: 18px;
+
+            @include lg-devices {
+                font-size: 20px;
+            }
+            @include xl-devices {
+                font-size: 22px;
+            }
+        }
+        p {
+            font-size: 16px;
+            margin: 20px 0 0;
+            line-height: 1.875;
+            @include lg-devices {
+                margin: 30px 0;
+                font-size: 18px;
+            }
+            @include xl-devices {
+                font-size: 20px;
+            }
+        }
+        .btn-pink {
+            background-color: $color__pink;
+            color: $color__white;
+            font-size: 12px;
+            padding: 8px 25px;
+            border-radius: 20px;
+            display: inline-block;
+            @include lg-devices {
+                padding: 12px 40px;
+                font-size: 14px;
+            }
+        }
+    }
+}

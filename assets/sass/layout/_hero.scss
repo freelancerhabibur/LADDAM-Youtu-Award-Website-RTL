@@ -1,0 +1,73 @@
+.hero-slider {
+    .slider-item {
+        background-size: cover;
+        background-position: center;
+        padding: 180px 0 85px;
+
+        @include xs-devices {
+            padding: 230px 0 100px;
+        }
+        @include lg-devices {
+            padding: 300px 0 150px;
+        }
+        @include xxl-devices {
+            padding: 440px 0 300px;
+        }
+    }
+
+    .slider-caption {
+        max-width: 700px;
+
+        @include md-devices {
+            max-width: 500px;
+        }
+        @include lg-devices {
+            max-width: 650px;
+        }
+        @include xl-devices {
+            max-width: 700px;
+        }
+        p {
+            background-color: rgba(#f1f5ff, 0.9);
+            padding: 30px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            @include xs-devices {
+                font-size: 15px;
+            }
+            @include lg-devices {
+                font-size: 24px;
+                padding: 30px 30px;
+                margin-bottom: 30px;
+            }
+            @include xl-devices {
+                font-weight: 700;
+            }
+        }
+        .btn-readmore {
+            background-color: $color__lightBlue;
+            display: inline-block;
+            // padding: 14px 24px;
+            padding: 12px 20px;
+            color: $color__white;
+            border-radius: 6px;
+            // font-size: 18px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s;
+
+            @include xs-devices {
+                font-size: 14px;
+            }
+            @include lg-devices {
+                font-size: 18px;
+                padding: 14px 24px;
+            }
+            &:hover {
+                background-color: $color__silver;
+            }
+        }
+    }
+}
